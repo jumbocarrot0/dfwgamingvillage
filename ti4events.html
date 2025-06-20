@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twilight Imperium 4 Legendary Planets</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            padding: 20px;
+        }
+
+        h1,
+        h2 {
+            color: #f9d342;
+            margin-left: 10%;
+        }
+
+        .eventMenu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px auto;
+            gap: 10px;
+        }
+
+        .event {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #444;
+            border-radius: 8px;
+            background-color: #2c2c2c;
+            flex: 1 1 calc(33.33% - 20px);
+            max-width: 40%;
+            transition: background 0.3s;
+        }
+
+        .event img {
+            width: 100%;
+            height: auto;
+            padding: 0;
+        }
+
+        /* .ds-only {
+            display: block;
+        } */
+
+        label {
+            font-size: 16px;
+            margin-left: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="/" style="display: inline-block; 
+        margin-bottom: 15px; 
+        padding: 8px 12px; 
+        background-color: #f9d342; 
+        color: #000; 
+        text-decoration: none; 
+        border-radius: 5px; 
+        font-weight: bold;
+        margin-left: 10%;">
+        ← Back to TI4 Faction Database
+    </a>
+    <h1>Twilight Imperium 4 Galactic Events</h1>
+    <label><input type="checkbox" id="toggleDS" checked /> Show Fanmade Events</label>
+    <h2>Codex IV Galactic Events</h2>
+    <div class="eventMenu">
+        <div class="event">
+            <img src="images/galactic_events/Age of Commerce.jpg" />
+        </div>
+        <div class="event">
+            <img src="images/galactic_events/Age of Exploration.jpg" />
+        </div>
+        <div class="event">
+            <img src="images/galactic_events/Minor Factions.jpg" />
+        </div>
+        <div class="event">
+            <img src="images/galactic_events/Total War.jpg" />
+        </div>
+    </div>
+
+    <h2 class="fan-only">My Galactic Events</h2>
+    <div class="eventMenu">
+        <div class="event fan-only">
+            <img src="images/galactic_events/Aggressive Custodians.jpg" />
+        </div>
+        <div class="event fan-only">
+            <img src="images/galactic_events/Bureaucracy.jpg" />
+        </div>
+        <div class="event fan-only">
+            <img src="images/galactic_events/Council Patience.jpg" />
+        </div>
+        <div class="event fan-only">
+            <img src="images/galactic_events/Relic Technologies.jpg" />
+        </div>
+        <div class="event fan-only">
+            <img src="images/galactic_events/Thunderdome.jpg" />
+        </div>
+        <div class="event fan-only">
+            <img src="images/galactic_events/Twilight Assembly.jpg" />
+        </div>
+    </div>
+
+    <h2 class="fan-only">Community Galactic Events</h2>
+    <div class="eventMenu">
+        <div class="event fan-only">
+            <img src="images/galactic_events/Broken Translators.png" />
+        </div>
+        <div class="event fan-only">
+            <img src="images/galactic_events/It's a Stellar Conversion.png" />
+        </div>
+        <div class="event fan-only">
+            <img src="images/galactic_events/Monolithic.png" />
+        </div>
+        <div class="event fan-only">
+            <img src="images/galactic_events/Weapons Team.png" />
+        </div>
+        <div class="event fan-only">
+            <img src="images/galactic_events/Domination of the Weak.jpg" />
+        </div>
+        <div class="event fan-only">
+            <img src="images/galactic_events/Little Big Planet.png" />
+        </div>
+        <div class="event fan-only">
+            <img src="images/galactic_events/Council's Decree.png" />
+        </div>
+        <div class="event fan-only">
+            <img src="images/galactic_events/Spoken For.png" />
+        </div>
+        <div class="event fan-only">
+            <img src="images/galactic_events/Who Watches the Watchers.png" />
+        </div>
+        <div class="event fan-only">
+            <img src="images/galactic_events/Age of Conquest.jpg" />
+        </div>
+        <div class="event fan-only">
+            <img src="images/galactic_events/The Big Crunch.png" />
+        </div>
+        <div class="event fan-only">
+            <img src="images/galactic_events/Galactic Depository.png" />
+        </div>
+        <div class="event fan-only">
+            <img src="images/galactic_events/Hidden Agenda.png" />
+        </div>
+        <div class="event fan-only">
+            <img src="images/galactic_events/Hitting Close to Home.png" />
+        </div>
+        <div class="event fan-only">
+            <img src="images/galactic_events/Hot Hands.png" />
+        </div>
+        <div class="event fan-only">
+            <img src="images/galactic_events/The Master's Plan.png" />
+        </div>
+        <div class="event fan-only">
+            <img src="images/galactic_events/Shift Happens.png" />
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('toggleDS').addEventListener('change', function () {
+            const dsPlanets = document.querySelectorAll('.fan-only');
+            dsPlanets.forEach(p => {
+                p.style.display = this.checked ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+
+</html>
