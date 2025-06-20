@@ -1,92 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="DFW Gaming Village" />
-    <meta property="og:description" content="Gaming and Social Events" />
-    <meta property="og:image" content="https://www.dfwgamingvillage.com/banner_cropped.png" />
-    <meta property="og:url" content="https://www.dfwgamingvillage.com/" />
+    <meta property="og:description" content="TI4 Faction Reference" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://www.dfwgamingvillage.com/banner.png" />
-    <title>DFW Gaming Village</title>
+    <title>TI4 Faction Database</title>
     <style>
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #000;
-            color: white;
             text-align: center;
-        }
-        .banner {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #111;
-            padding: 20px 0;
-        }
-        .banner img {
-            max-width: 100%;
-            height: auto;
-        }
-        .nav {
-            background-color: #222;
-            padding: 15px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .nav a {
-            color: white;
-            text-decoration: none;
-            margin: 10px;
-            font-size: 18px;
-        }
-        .content {
-            padding: 50px 20px;
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-        .content a {
-            color: #ffcc00; /* Highlight links in gold */
-            text-decoration: none;
-        }
-        .content a:hover {
-            text-decoration: underline;
-        }
-        .footer {
-            background-color: #222;
+            background-color: #121212;
+            color: #e0e0e0;
             padding: 20px;
+        }
+
+        #container {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            display: inline-block;
+            text-align: left;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .faction-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
             margin-top: 20px;
         }
+
+        .faction-header img {
+            width: 75px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .faction-header h2 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #ffffff;
+        }
+
+        .info-section {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            background: #2a2a2a;
+            color: #e0e0e0;
+        }
+
+        .tech-icon,
+        .monument-icon {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        #factionMenu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px auto;
+            gap: 10px;
+        }
+
+        .faction-tile {
+            background: #2a2a2a;
+            border-radius: 8px;
+            padding: 10px;
+            cursor: pointer;
+            text-align: center;
+            flex: 1 1 calc(33.33% - 20px);
+            max-width: 120px;
+            transition: background 0.3s;
+        }
+
+        .faction-tile:hover {
+            background: #3a3a3a;
+        }
+
+        .faction-tile img {
+            width: 100%;
+            height: auto;
+            padding: 0;
+            /* border-radius: 6px; */
+            /* margin-bottom: 5px; */
+        }
+
+        .ds-faction {
+            padding: 8px;
+            border: 2px solid #ff00dd;
+            box-shadow: 0 0 8px rgba(255, 0, 221, 0.5);
+        }
+
+        .modified-lightly {
+            padding: 9px;
+            border: 1px solid #e5ff007f;
+            box-shadow: 0 0 2px rgba(229, 255, 0, 0.25);
+        }
+
+        .modified-moderately {
+            padding: 8px;
+            border: 2px solid #ff9800;
+            box-shadow: 0 0 6px rgba(255, 152, 0, 0.5);
+        }
+
+        .modified-heavily {
+            padding: 8px;
+            border: 2px solid #ff0000;
+            box-shadow: 0 0 12px rgba(255, 0, 0, 0.75);
+        }
+
+        #menuToggle {
+            display: none;
+            margin-left: 10px;
+            padding: 5px 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #factionInfo {
+            white-space: pre-wrap;
+        }
     </style>
+    <script>
+        let factionData = {};
+        let showDS = localStorage.getItem("showDS") === "true";
+
+        function populateDropdown() {
+            const dropdown = document.getElementById("factionDropdown");
+            dropdown.innerHTML = '<option value="">--Choose a faction--</option>';
+
+            factionData.forEach(faction => {
+                if (!showDS) {
+                    const dsKey = Object.keys(faction).find(k => k.trim().toLowerCase() === "ds:");
+                    if (dsKey && String(faction[dsKey]).toLowerCase() === "yes") return;
+                }
+
+
+                let option = document.createElement("option");
+                option.value = faction["Faction Name:"];
+                option.textContent = faction["Faction Name:"];
+                dropdown.appendChild(option);
+            });
+        }
+
+        function populateFactionMenu() {
+            const menu = document.getElementById("factionMenu");
+            menu.innerHTML = "";
+
+            factionData.forEach(faction => {
+                // Try to find a DS-related key (case-insensitive, spacing tolerant)
+                const dsKey = Object.keys(faction).find(k => k.trim().toLowerCase() === "ds:");
+                const isDSFaction = dsKey && String(faction[dsKey]).toLowerCase() === "yes";
+
+                // Skip DS factions if checkbox is not checked
+                if (!showDS && isDSFaction) return;
+
+                // Create faction tile
+                let tile = document.createElement("div");
+                tile.className = "faction-tile";
+
+                // Visually highlight DS factions
+                if (isDSFaction) {
+                    tile.classList.add("ds-faction");
+                }
+
+                if (faction["Modified:"]){
+                    if (faction["Modified:"].trim().toLowerCase() === "lightly"){
+                        tile.classList.add("modified-lightly");
+                    }
+                    if (faction["Modified:"].trim().toLowerCase() === "moderately"){
+                        tile.classList.add("modified-moderately");
+                    }
+                    if (faction["Modified:"].trim().toLowerCase() === "heavily"){
+                        tile.classList.add("modified-heavily");
+                    }
+                }
+
+                tile.onclick = () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    displayFactionInfo(faction["Faction Name:"]);
+                };
+
+                let icon = document.createElement("img");
+                icon.src = `images/buttons/${faction["Faction Name:"].replace(/ /g, "_").toLowerCase()}.jpg`;
+                icon.alt = `${faction["Faction Name:"]} Icon`;
+
+                // let label = document.createElement("div");
+                // label.textContent = faction["Faction Name:"];
+
+                tile.appendChild(icon);
+                // tile.appendChild(label);
+                menu.appendChild(tile);
+            });
+        }
+
+
+        function replaceTechWords(text) {
+            if (!text) return "";
+            return text.replace(/YELLOW/g, '<img src="images/cybernetic.png" class="tech-icon">')
+                .replace(/RED/g, '<img src="images/warfare.png" class="tech-icon">')
+                .replace(/GREEN/g, '<img src="images/biotic.png" class="tech-icon">')
+                .replace(/BLUE/g, '<img src="images/propulsion.png" class="tech-icon">');
+        }
+
+        function replaceMonumentWords(text) {
+            if (!text) return "";
+            return text.replace(/GREEN/g, '<img src="images/industrial.png" class="monument-icon">')
+                .replace(/BLUE/g, '<img src="images/cultural.png" class="monument-icon">')
+                .replace(/RED/g, '<img src="images/hazardous.png" class="monument-icon">')
+                .replace(/LEGENDARY/g, '<img src="images/legendary.png" class="monument-icon">')
+                .replace(/MECATOL REX/g, '<img src="images/rex.png" class="monument-icon">');
+        }
+
+        function displayFactionInfo(selectedFaction) {
+            const infoDiv = document.getElementById("factionInfo");
+            const menu = document.getElementById("factionMenu");
+            const toggleBtn = document.getElementById("menuToggle");
+            infoDiv.innerHTML = "";
+            menu.style.display = "none";
+            toggleBtn.style.display = "inline-block";
+
+            let faction = factionData.find(f => f["Faction Name:"] === selectedFaction);
+            if (!faction) return;
+
+            let headerDiv = document.createElement("div");
+            headerDiv.className = "faction-header";
+
+            let icon = document.createElement("img");
+            icon.src = `images/buttons/${selectedFaction.replace(/ /g, "_").toLowerCase()}.jpg`;
+            icon.alt = `${selectedFaction} Icon`;
+
+            let title = document.createElement("h2");
+            title.textContent = selectedFaction;
+
+            headerDiv.appendChild(icon);
+            headerDiv.appendChild(title);
+            infoDiv.appendChild(headerDiv);
+
+            Object.entries(faction).forEach(([key, value]) => {
+                if (key === "Monument:"){
+                    return
+                }
+                if (key.trim().toLowerCase() === "ds:") return;
+                if (key === "Faction Name:" || value === "") return;
+                let section = document.createElement("div");
+                section.className = "info-section";
+                let h2 = document.createElement("h2");
+                h2.textContent = key.replace(/_/g, " ");
+                let p = document.createElement("p");
+
+                if (key.includes("Technology") || key.includes("Unit")) {
+                    p.innerHTML = replaceTechWords(value);
+                } else if (key === "Monument:") {
+                    p.innerHTML = replaceMonumentWords(value);
+                } else {
+                    p.innerHTML = value;
+                }
+                section.appendChild(h2);
+                section.appendChild(p);
+                infoDiv.appendChild(section);
+            });;
+        }
+
+        function showFactionMenu() {
+            document.getElementById("factionMenu").style.display = "flex";
+            document.getElementById("menuToggle").style.display = "none";
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const dsCheckbox = document.getElementById("dsToggle");
+
+            // Restore from localStorage
+            dsCheckbox.checked = localStorage.getItem("showDS") === "true";
+            showDS = dsCheckbox.checked;
+
+            dsCheckbox.addEventListener("change", () => {
+                showDS = dsCheckbox.checked;
+                localStorage.setItem("showDS", showDS);
+                populateDropdown();
+                populateFactionMenu();
+            });
+
+            fetch("factionData_with_icons.json")
+                .then(response => response.json())
+                .then(data => {
+                    factionData = data;
+                    populateDropdown();
+                    populateFactionMenu();
+                });
+        });
+
+
+    </script>
 </head>
+
 <body>
-    <div class="nav">
-        <a href="index.html">Home</a>
-        <a href="join.html">Join the Community</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="games.html">Game Library</a>
-        <a href="events.html">Events</a>
-        <a href="player-aids.html">Player Aids</a>
-        <a href="contact.html">Contact</a>
-    </div>
-    <div class="banner">
-        <img src="banner.png" alt="DFW Gaming Village Banner">
-    </div>
-    <div class="content">
-        <h1>Welcome to DFW Gaming Village</h1>
-        <p>We are a gaming community that hosts <strong>gaming and social events</strong> while providing <strong>board game library services</strong> for our members, organizations, and conventions. 
-        On this website, you’ll find our <a href="games.html">game library</a>, links to our 
-        <a href="https://www.facebook.com/groups/dfwgamingvillage" target="_blank">Facebook group</a> and 
-        <a href="https://discord.gg/BMYyM88Shs" target="_blank">Discord</a>, our <a href="events.html">event calendar</a> and ways to 
-        <a href="contact.html">connect with us</a>.</p>
-    </div>
-    <div class="footer">
-        <p>&copy; 2025 DFW Gaming Village. All Rights Reserved.</p>
+    <a href="ti4legendaryplanets.html"
+        style="display:inline-block; margin-bottom:15px; background:#333; color:white; padding:10px 20px; border-radius:5px; text-decoration:none;">
+        <img src="images/legendary.png" alt="Legendary Icon"
+            style="height:16px; vertical-align:middle; margin-right:5px;">
+        TI4 Legendary Planet Reference
+        <img src="images/legendary.png" alt="Legendary Icon"
+            style="height:16px; vertical-align:middle; margin-left:5px;">
+        →
+    </a>
+
+
+    <a href="ti4tech.html"
+        style="display:inline-block; margin-bottom:15px; background:#333; color:white; padding:10px 20px; border-radius:5px; text-decoration:none;">
+        <img src="images/biotic.png" alt="Biotic" style="height:16px; vertical-align:middle; margin-right:5px;">
+        <img src="images/cybernetic.png" alt="Cybernetic" style="height:16px; vertical-align:middle; margin-right:5px;">
+        <img src="images/propulsion.png" alt="Propulsion" style="height:16px; vertical-align:middle; margin-right:5px;">
+        <img src="images/warfare.png" alt="Warfare" style="height:16px; vertical-align:middle; margin-right:10px;">
+        TI4 Technology Reference →
+    </a>
+
+
+    <a href="ti4events.html"
+        style="display:inline-block; margin-bottom:15px; background:#333; color:white; padding:10px 20px; border-radius:5px; text-decoration:none;">
+        TI4 Galactic Events Reference →
+    </a>
+
+    <h1>TI4 Faction Database</h1>
+    <p>This website is personalised for my own set of Twilight Imperium, including all homebrew changes</p>
+    <p>Vanilla factions with a glow have been changed, bigger the glow bigger the change. Feel free to request that any of these changes be reversed, or to propose changes of your own!</p>
+    <p>This is a fork of <a href="https://www.dfwgamingvillage.com/ti.html">https://www.dfwgamingvillage.com/ti.html</a></p>
+    <div id="container">
+        <label for="factionDropdown"><strong>Select a Faction:</strong></label>
+        <label><input type="checkbox" id="dsToggle"> Discordant Stars?</label>
+        <select id="factionDropdown" onchange="displayFactionInfo(this.value)">
+            <option value="">--Choose a faction--</option>
+        </select>
+        <button id="menuToggle" onclick="showFactionMenu()">Show Faction Menu</button>
+        <div id="factionMenu"></div>
+        <div id="factionInfo"></div>
     </div>
 </body>
+
 </html>
