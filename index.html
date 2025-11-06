@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="DFW Gaming Village" />
-    <meta property="og:description" content="TI4 Faction Reference" />
+    <meta property="og:title" content="TI4 Reference" />
+    <meta property="og:description" content="Personalised TI4 reference site for my homebrew TI4 set." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <title>TI4 Faction Database</title>
@@ -179,13 +179,13 @@
                 }
 
                 if (faction["Modified:"]){
-                    if (faction["Modified:"].trim().toLowerCase() === "lightly"){
+                    if (faction["Modified:"].trim().toLowerCase().slice(0, 7) === "lightly"){
                         tile.classList.add("modified-lightly");
                     }
-                    if (faction["Modified:"].trim().toLowerCase() === "moderately"){
+                    if (faction["Modified:"].trim().toLowerCase().slice(0, 10) === "moderately"){
                         tile.classList.add("modified-moderately");
                     }
-                    if (faction["Modified:"].trim().toLowerCase() === "heavily"){
+                    if (faction["Modified:"].trim().toLowerCase().slice(0, 7) === "heavily"){
                         tile.classList.add("modified-heavily");
                     }
                 }
@@ -309,6 +309,12 @@
 </head>
 
 <body>
+
+    <a href="/"
+        style="display:inline-block; margin-bottom:15px; background:#333; color:white; padding:10px 20px; border-radius:5px; text-decoration:none;">
+        ← Faction Reference
+    </a>
+
     <a href="ti4legendaryplanets.html"
         style="display:inline-block; margin-bottom:15px; background:#333; color:white; padding:10px 20px; border-radius:5px; text-decoration:none;">
         <img src="images/legendary.png" alt="Legendary Icon"

@@ -42,7 +42,7 @@
     "Other 5:": "",
     "Other 6:": "",
     "DS:": "no",
-    "Modified:": "heavily"
+    "Modified:": "Heavily\n\n- Arborec have been given a unique PDS unit to offset their reluctance to use Construction.\n- Arborec's old mechs acted like half a PDS. Now that their PDS are even more alike, their Mechs have been repurposed into becoming more PDS.\n- Finally, their flagship received a slight boost as it often unused."
   },
   { "Faction Name:": "The Barony of Letnev",
     "Faction Ability 1:": "MUNITIONS RESERVES: At the start of each round of space combat, you may spend 2 resources; you may re-roll any number of your dice during that combat round.",
@@ -87,7 +87,7 @@
     "Other 5:": "",
     "Other 6:": "",
     "DS:": "no",
-    "Modified:": "moderately"
+    "Modified:": "Moderately\n\n- Letnev's hero was awkward to use, so they've been given a new ability that gives potential free value and highlights their less-than-diplomatic ways.\n- Their Munitions Reserve ability has also been made cheaper, now costing 2 resources instead of 2 trade goods.\n- Finally, their flagship has an ability that stepped on the toes of L1Z1X, so it has been replaced with an extra combat die."
   },
   { "Faction Name:": "The Clan of Saar",
     "Faction Ability 1:": "SCAVENGE: After you gain control of a planet, gain 1 trade good.",
@@ -132,7 +132,7 @@
     "Other 5:": "",
     "Other 6:": "",
     "DS:": "no",
-    "Modified:": "lightly"
+    "Modified:": "Lightly\n\n- The Saar's \"Chaos Mapping\" technology is one of the strongest in the game, and iconically so. It is therefore incredible that it was originally give only 1 prerequisite. The tech has the same effect, but is now deeper in the tech tree. Saar can still pick it up by Round 3 if they want to, where it will have plenty of use."
   },
   { "Faction Name:": "The Embers of Muaat",
     "Faction Ability 1:": "STAR FORGE: ACTION: Spend 1 token from your strategy pool to place either 2 fighters or 1 destroyer from your reinforcements in a system that contains 1 or more of your war suns.",
@@ -177,7 +177,7 @@
     "Other 5:": "",
     "Other 6:": "",
     "DS:": "no",
-    "Modified:": "moderately"
+    "Modified:": "Moderately\n\n- Muaat's Flagship was in an awkward position, where its old ability conflicted with the Muatt's mech and Star Forge abilities. It is a common suggestion to make the flagship just a third War Sun, so that's what I have went with.\n- The Fires of the Gashlai Promissory note used to cause Muaat to lose a fleet token when used. This cost has been removed, as part of a wider initiative to make faction promissory notes more used."
   },
   { "Faction Name:": "The Emirates of Hacan",
     "Faction Ability 1:": "MASTERS OF TRADE: You do not have to spend a command token to resolve the secondary ability of the \"Trade\" strategy card.",
@@ -222,7 +222,7 @@
     "Other 5:": "",
     "Other 6:": "",
     "DS:": "no",
-    "Modified:": "lightly"
+    "Modified:": "Lightly\n\n- Hacan's flagship is one of the worst in the game. The new ability is not amazing either, but its a step up (and for a faction that can plonk out their flagship for free at some point, it doesn't need to be spectacular)"
   },
   { "Faction Name:": "The Federation of Sol",
     "Faction Ability 1:": "ORBITAL DROP: ACTION: Spend 1 token from your strategy pool to place 2 infantry from your reinforcements on 1 planet you control.",
@@ -267,7 +267,7 @@
     "Other 5:": "",
     "Other 6:": "",
     "DS:": "no",
-    "Modified:": "lightly"
+    "Modified:": "Lightly:\n\n- The Sol's flagship has had its weak ability removed to instead highlight the large amount of capacity, which is the true strength of the flagship.\n\n- The military support promissory note used to cost Sol a strategy token when used. This has been removed to make the note more usable."
   },
   { "Faction Name:": "The Ghosts of Creuss",
     "Faction Ability 1:": "QUANTUM ENTANGLEMENT : You treat all systems that contain either a non-delta wormhole as adjacent to each other. Game effects cannot prevent you from using this ability",
@@ -312,7 +312,7 @@
     "Other 5:": "",
     "Other 6:": "",
     "DS:": "no",
-    "Modified:": "lightly"
+    "Modified:": "Lightly:\n\n- Ghosts have been given a PDS to make PDS strategies slightly more viable\n- The wording of their abilities have been tweaked to allow compatibility with Gamma wormholes and any other type of wormholes that may crop up."
   },
   { "Faction Name:": "The L1Z1X Mindnet",
     "Faction Ability 1:": "ASSIMILATE: When you gain control of a planet, replace each PDS and space dock that is on that planet with a matching unit from your reinforcements.",
@@ -357,11 +357,11 @@
     "Other 5:": "",
     "Other 6:": "",
     "DS:": "no",
-    "Modified:": "heavily"
+    "Modified:": "Heavily\n\nThis changes are focusing on make L1Z1X more distinct than just a generic fighty faction (see Letnev which already fills that niche).\n- The old commander aiblity, which lets L1Z1x bypass planetary shield, is now moved to their Dreadnought upgrade.\n- Their old Harrow ability now becomes their commander. It is unlikely to see use in the early game, and now gives L1 something good to sell.\n- Two new faction abilities related to exhausting planets, to give L1 some more mechanical flavour.\n- They now sport a new promissory note that lets them grant immunity to their new abilities, if they want to take the diplomatic route.\n- They now start with an extra technology to bring them closer to their two faction technologies.\n- Finally, a carrier in their starting fleet has been replaced with a dreadnought to highlight their dreadnought's extra capacity, and setting them apart from other factions."
   },
   { "Faction Name:": "The Mentak Coalition",
     "Faction Ability 1:": "PILLAGE: After 1 of your neighbors gains trade goods or resolves a transaction, if they have 3 or more trade goods, you may take 1 of their trade goods or commodities.",
-    "Faction Ability 2:": "SALVAGE OPERATIONS: After a space combat in a system that contains or is adjacent to 1 of your ships, gain 1 trade good; if you won that combat, you may also produce 1 ship in that system of any ship type that was destroyed during the combat.",
+    "Faction Ability 2:": "SALVAGE OPERATIONS: At the end of space combat, gain 1 trade good; if you won that combat, you may also produce 1 ship in the active system of any ship type that was destroyed during the combat.",
     "Faction Ability 3:": "",
     "Faction Ability 4:": "",
     "Faction Promissory Note:": "Promise of Protection: ACTION: Place this card face-up in your play area. While this card is in your play area, the Mentak player cannot use their Pillage faction ability against you. If you activate a system that contains 1 or more of the Mentak player's units, return this card to the Mentak player.",
@@ -371,8 +371,8 @@
     "Faction Technology 1:": "YELLOW: Mirror Computing: When you spend trade goods, each trade good is worth 2 resources or influence instead of 1. \nPREREQ: YELLOW YELLOW YELLOW",
     "Faction Technology 2:": "",
     "Faction Technology 3:": "",
-    "Faction Specific Unit 1:": "CRUISER: Ricketeer I: || COST: 2 || COMBAT: 6 || MOVE: 2 || CAPACITY: - || Space Cannon 7 Hits produced by this unit's SPACE CANNON must be assigned to non-fighter ships if able.",
-    "Faction Specific Unit 2:": "CRUISER: Ricketeer I: || COST: 2 || COMBAT: 5 || MOVE: 3 || CAPACITY: 1 || Space Cannon 6 Hits produced by this unit's SPACE CANNON must be assigned to non-fighter ships if able. \nPREREQ: RED GREEN YELLOW",
+    "Faction Specific Unit 1:": "CRUISER: Ricketeer I: || COST: 2 || COMBAT: 7 || MOVE: 2 || CAPACITY: - || Space Cannon 8 ",
+    "Faction Specific Unit 2:": "CRUISER: Ricketeer I: || COST: 2 || COMBAT: 6 || MOVE: 3 || CAPACITY: 1 || Space Cannon 7\nPREREQ: RED GREEN YELLOW",
     "Faction Specific Unit 3:": "",
     "Faction Specific Unit 4:": "",
     "Flagship:": "Fourth Moon: || COST: 8 || COMBAT: 7(x2) || MOVE: 1 || CAPACITY: 3 ||  Sustain Damage. Other players' ships in this system cannot use Sustain Damage.",
@@ -402,7 +402,7 @@
     "Other 5:": "",
     "Other 6:": "",
     "DS:": "no",
-    "Modified:": "heavily"
+    "Modified:": "Heavily:\n\n- Mentak's old \"Ambush\" ability, which granted a pre-combat roll to cruisers, has been removed in favour of faction-unique cruisers with space cannon (which also grant a pre-combat roll)\n- Mentak's \"Salvage Operations\" technology has now become a starting faction ability.\n- Given Mentak more flexible starting technology (2 of any level 0 tech of different colours), to reflect that they build off the tech of other factions."
   },
   { "Faction Name:": "The Naalu Collective",
     "Faction Ability 1:": "TELEPATHIC: At the end of the strategy phase, place the Naalu \"0\" token on your strategy card; you are first in initiative order.",
@@ -422,9 +422,9 @@
     "Faction Specific Unit 4:": "",
     "Flagship:": "Matriarch: || COST: 8 || COMBAT: 9(x2) || MOVE: 1 || CAPACITY: 6 || Sustain Damage. During an invasion in this system, you may commit fighters to planets as if they were ground forces. When combat ends, return those units to the space area.",
     "Flagship 2:": "",
-    "Mech:": "Iconoclast: When you explore this planet, you may draw 1 additional card; gain that card if it is a relic fragment, otherwise discard it. || COST: 2 || COMBAT: 6 || Sustain Damage.",
+    "Mech:": "Iconoclast: DEPLOY: When another player gains a relic, place 1 mech on any planet you control. || COST: 2 || COMBAT: 6 || Sustain Damage.",
     "Mech 2:": "",
-    "Agent:": "M'aban Ω: After a player activates a non-home system: You may exhaust this card to remove that command token from the game board.",
+    "Agent:": "M'aban Ω: After any player's command token is placed in a system: You may exhaust this card to return that token to that player's reinforcements.",
     "Agent 2:": "",
     "Agent 3:": "",
     "Commander:": "Z'eu Ω: || UNLOCK CRITERIA: Have ground forces in or adjacent to the Mecatol Rex system. || At any time: You may look at your neighbours' hand of promissory notes and the top and bottom card of the agenda deck.",
@@ -447,7 +447,7 @@
     "Other 5:": "",
     "Other 6:": "",
     "DS:": "no",
-    "Modified:": "moderately"
+    "Modified:": "Lightly:\n\n- Their foresight ability can now be used by spending a relic fragment, given that their powers supposedly come from crystals."
   },
   { "Faction Name:": "The Nekro Virus",
     "Faction Ability 1:": "GALACTIC THREAT : You cannot vote on agendas.  Once per agenda, after an agenda is revealed, you may predict aloud the outcome of that agenda.  If your prediction is correct, gain 1 technology that is owned by a player who voted how you predicted.",
@@ -492,7 +492,7 @@
     "Other 5:": "",
     "Other 6:": "",
     "DS:": "no",
-    "Modified:": "lightly"
+    "Modified:": "Lightly:\n\n- Nekro's agenda phase ability can now be used every agenda, not just once per agenda phase. This is mostly so they're not forced to sit around doing nothing."
   },
   { "Faction Name:": "Sardakk N'orr",
     "Faction Ability 1:": "UNRELENTING: Apply +1 to the result of each of your unit's combat rolls.",
@@ -537,7 +537,7 @@
     "Other 5:": "",
     "Other 6:": "",
     "DS:": "no",
-    "Modified:": "lightly"
+    "Modified:": "Lightly:\n\n- N'orr's flagship has been buffed to benefit from its own ability and not undo their faction ability's benefit."
   },
   { "Faction Name:": "The Universities of Jol-Nar",
     "Faction Ability 1:": "FRAGILE: Apply -1 to the result of each of your unit's combat rolls.",
@@ -582,7 +582,7 @@
     "Other 5:": "",
     "Other 6:": "",
     "DS:": "no",
-    "Modified:": "no"
+    "Modified:": "None"
   },
   { "Faction Name:": "The Winnu",
     "Faction Ability 1:": "BLOOD TIES: You do not have to spend influence to remove the custodians token from Mecatol Rex.",
@@ -627,7 +627,7 @@
     "Other 5:": "",
     "Other 6:": "",
     "DS:": "no",
-    "Modified:": "moderately"
+    "Modified:": "Moderately:\n\n- Their Reclamation ability now allows them to build immediately after taking Mecatol Rex.\n- Their Lazax Gate Folding technology now has 1 fewer prerequisite, making it easier to pick up when you need it.\n- Winnu's hero is the single most powerful ability in the game, so much so that its only counter was to pummel Winnu into the groud. This nerf gives players other ways to deal with it, and should ironically help Winnu."
   },
   { "Faction Name:": "The Xxcha Kingdom",
     "Faction Ability 1:": "PEACE ACCORDS: After you resolve the primary or secondary ability of the \"Diplomacy\" strategy card, you may gain control of 1 planet other than Mecatol Rex that does not contain any units and is in a system that is adjacent to a planet you control.",
@@ -672,7 +672,7 @@
     "Other 5:": "",
     "Other 6:": "",
     "DS:": "no",
-    "Modified:": "lightly"
+    "Modified:": "Lightly\n\nXxcha is subject to change one I have the new expansion. But for now:\n- Xxcha's promissory note used to cost Xxcha a strategy token, now it costs the one who plays it a token.\n- Xxcha's hero does the blasphemous and acts as a permanent new ability rather than a one-time use. It has now been made once-per-game only, which should be plenty powerful."
   },
   { "Faction Name:": "The Yin Brotherhood",
     "Faction Ability 1:": "INDOCTRINATION: At the start of a ground combat, you may spend 2 influence to replace 1 of your opponent's participating infantry with 1 infantry from your reinforcements.",
@@ -683,7 +683,7 @@
     "Faction Promissory Note 2:": "",
     "Faction Promissory Note 3:": "",
     "Faction Promissory Note 4:": "",
-    "Faction Technology 1:": "YELLOW: Impulse Core: At the start of a space combat, you may destroy 1 of your cruisers or destroyers in the active system to produce 1 hit against your opponent's ships; that hit must be assigned by your opponent to 1 of their non-fighter ships, if able. \nPREREQ: YELLOW.",
+    "Faction Technology 1:": "YELLOW: Impulse Core: At the start of a space combat, you may destroy 1 of your cruisers or destroyers in the active system to produce 1 hit and assign it to 1 of your opponent's ships. \nPREREQ: YELLOW.",
     "Faction Technology 2:": "GREEN: Yin Spinner Ω: After you produce units, place up to 2 infantry from your reinforcements on any planet you control or in any space area that contains 1 or more of your ships. \nPREREQ: GREEN GREEN.",
     "Faction Technology 3:": "",
     "Faction Specific Unit 1:": "",
@@ -717,7 +717,7 @@
     "Other 5:": "",
     "Other 6:": "",
     "DS:": "no",
-    "Modified:": "moderately"
+    "Modified:": "Moderately:\n\n- The original Impulse Core was comically weak. It now has an effect consistent with their faction ability, and is easier to pick up to give Yin a clear line down the Yellow tech tree. (Might re-add the prereq since it might be too powerful)"
   },
   { "Faction Name:": "The Yssaril Tribes",
     "Faction Ability 1:": "STALL TACTICS: ACTION: Discard 1 action card from your hand.",
@@ -762,7 +762,7 @@
     "Other 5:": "",
     "Other 6:": "",
     "DS:": "no",
-    "Modified:": "lightly"
+    "Modified:": "Lightly:\n\n- Slight buff to their flagship"
   },
   { "Faction Name:": "The Argent Flight",
     "Faction Ability 1:": "ZEAL - You always vote first during the agenda phase. When you cast at least 1 vote, cast 1 additional vote for each player in the game including you.",
@@ -807,7 +807,7 @@
     "Other 5:": "",
     "Other 6:": "",
     "DS:": "no",
-    "Modified:": "lightly"
+    "Modified:": "Lightly: - Argent used to be given the choice between 2 of 3 starting techs. But, there was an obvious choice for experienced players to go down, so instead I've removed the choice to make it easier for new players."
   },
   { "Faction Name:": "The Empyrean",
     "Faction Ability 1:": "VOIDBORN - Nebulae do not affect your ships' movement.",
@@ -1072,7 +1072,7 @@
     "Other 5:": "",
     "Other 6:": "",
     "DS:": "no",
-    "Modified:": "lightly"
+    "Modified:": "Lightly:\n\n- Is now immune to all gravity rifts"
   },
   { "Faction Name:": "The Council Keleres",
     "Faction Ability 1:": "THE TRIBUNII: During setup, choose an unplayed faction from among the Mentak, the Xxcha and The Argent Flight; take that faction's home system, command tokens and control markers. Additionally, take the Keleres Hero that corresponds to that faction.",
@@ -1165,7 +1165,7 @@
   { "Faction Name:": "The Dih-Mohn Flotilla",
     "Faction Ability 1:": "CAPITAL FLEET: Destroyers count as 1/2 of a ship against your fleet pool.",
     "Faction Ability 2:": "MIGRANT EXPLORERS: After you explore a frontier token in a system, you may explore a planet you control that is adjacent to that system.",
-    "Faction Ability 3:": "FLOTILLA: You cannot have more infantry than non-fighter ships in the space area of a system.",
+    "Faction Ability 3:": "LIVABLE QUARTERS: You cannot have more infantry than non-fighter ships in the space area of a system.",
     "Faction Ability 4:": "",
     "Faction Promissory Note:": "Combat Drills: When 1 of your ships would be destroyed: Instead of destroying that ship, place this card face up in your play area. Return this card to the Dih-Mohn player at the start of the status phase.",
     "Faction Promissory Note 2:": "",
@@ -1335,7 +1335,44 @@
     "Other 3:": "Trap - Account Siphon(1): While this card is attached, you may reveal this card after a player gains control of this planet. Take up to 2 trade goods or 3 commodities from that player. At the end of this tactical action, return this card to your reinforcements.",
     "Other 4:": "Trap - Gravitic Inhibitor(1): While this card is attached, you may reveal this card after a player activates this system. Until the end of this tactical action, that player cannot move more ships than 1 fewer than their fleet supply limit into this system. At the end of this tactical action, return this card to your reinforcements.",
     "Other 5:": "Trap - Feint(1): While this card is attached, you may reveal this card at any time. Then, return this card to your reinforcements.",
-    "Other 6:": "Trap - Saboteurs(1)*: While this card is attached, you may reveal this card at any time. Choose 1 non-carrier unit in this system. If it is not damaged, and has the SUSTAIN DAMAGE ability, that unit becomes damaged; otherwise, destroy that unit. Then, return this card to your reinforcements. NOTE: Trap - Saboteurs is an optional component, for groups which prefer to have stronger Traps.",
+    "DS:": "yes"
+  },
+  { "Faction Name:": "The Myko-Mentori",
+    "Faction Ability 1:": "PRESCIENT MEMORIES: You have 4 \"Omen\" dice. At the start of the strategy phase, roll all 4 Omen dice and place them near your faction sheet.",
+    "Faction Ability 2:": "DIVINATION: Before you would roll a die, you may instead spend 1 Omen die to resolve that roll as if it had the result of that die. Return the spent Omen die to your reinforcements.",
+    "Faction Ability 3:": "NECROPHAGE: Apply +1 to your commodity value for each space dock you control. After the first round of combat, gain 1 commodity or convert 1 of your commodities to a trade good.",
+    "Faction Ability 4:": "",
+    "Faction Promissory Note:": "Gift of Insight: ACTION: Place this card face up in your play area. While this card is in your play area, once per turn, after you roll a die, you may reroll that die. If you activate a system that contains 1 or more of the Myko-Mentori player's units, return this card to the Myko-Mentori player..",
+    "Faction Promissory Note 2:": "",
+    "Faction Promissory Note 3:": "",
+    "Faction Promissory Note 4:": "",
+    "Faction Technology 1:": "GREEN: Psychoactive Armaments: After your opponent makes a combat roll, you may exhaust this card to reroll the combat roll of any number of your opponent's units that did not produce any hits; any hits those rerolls produce are produced against your opponent’s units instead of your own. \nPREREQ: GREEN GREEN",
+    "Faction Technology 2:": "",
+    "Faction Technology 3:": "",
+    "Faction Specific Unit 1:": "SPACE DOCK: Mycelium Ring I || This unit's PRODUCTION value is equal to 2 more than the resource value of this planet. DEPLOY: When you gain control of a planet, you may replace 4 infantry on that planet with 1 space dock.",
+    "Faction Specific Unit 2:": "SPACE DOCK: Mycelium Ring II || This unit's PRODUCTION value is equal to 5 more than the resource value of this planet. DEPLOY: When you gain control of a planet, you may replace 3 infantry on that planet with 1 space dock. \nPREREQ: YELLOW YELLOW",
+    "Faction Specific Unit 3:": "",
+    "Faction Specific Unit 4:": "",
+    "Flagship:": "Psyclobea Qubis: || COST: 8 || COMBAT: 7(x2) || MOVE: 1 || CAPACITY: 3 || Sustain Damage. Once per round of space combat, when a non-fighter ship in this system is destroyed, you may gain 1 commodity.",
+    "Flagship 2:": "",
+    "Mech:": "Amandia Pholdis: After this unit is destroyed, roll a die. If the result is 6 or greater, place the unit on this card. At the start of your turn, you may replace 1 infantry you control with a unit that is on this card. || COST: 2 || COMBAT: 6 || Sustain Damage.",
+    "Mech 2:": "",
+    "Agent:": "Lactarius Indigo - Omen Caller: Before a player rolls a die: You may instead exhaust this card and choose 1 unspent Omen die; resolve that die roll as if it had the result of that Omen die, without spending the Omen die.",
+    "Agent 2:": "",
+    "Agent 3:": "",
+    "Commander:": "Amanita Muscaria: || UNLOCK CRITERIA: Have 4 commodities on your faction sheet. || After another player produces 1 or more hits against your units during space combat: You may spend 1 commodity or 1 trade good to cancel 1 of those hits.",
+    "Hero:": "Coprinus Comatus: || UNLOCK CRITERIA: Have 3 Scored Objectives. || SOUL CAGE - RISE AGAIN: When another player's hero would be purged, instead attach it to this card. You may resolve this card as if it instead had the text of any single hero attached to this card. When this card is purged, purge each of its attachments as well.",
+    "Hero 2:": "",
+    "Hero 3:": "",
+    "Faction Starting Fleets:": " • 2 Carriers \n • 1 Cruiser \n • 1 Fighter \n • 6 Infantry \n • 1 Space Dock",
+    "Faction Starting Technology 1:": "YELLOW Predictive Intelligence: At the end of your turn, you may exhaust this card to redistribute your command tokens.\n\nWhen you cast votes during the agenda phase, you may cast 3 additional votes; if you do, and the outcome you voted for is not resolved, exhaust this card",
+    "Faction Starting Technology 2:": "",
+    "Faction Starting Technology 3:": "",
+    "Faction Starting Technology 4:": "",
+    "Faction Home System:": " • Shi-Halaum: 4/0",
+    "Commodities:": 1,
+    "Complexity:": "Low",
+    "Monument:": "Gravelord's Keep: || ELIGIBLE PLANETS: GREEN BLUE || After each round of ground combat on this planet, if you have units in combat, place 1 infantry from your reinforcements on this planet.",
     "DS:": "yes"
   },
   { "Faction Name:": "The Olradin League",
