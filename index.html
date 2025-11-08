@@ -26,7 +26,7 @@
             display: inline-block;
             text-align: left;
             width: 80%;
-            max-width: 800px;
+            /* max-width: 800px; */
         }
 
         .faction-header {
@@ -80,7 +80,7 @@
             cursor: pointer;
             text-align: center;
             flex: 1 1 calc(33.33% - 20px);
-            max-width: 120px;
+            max-width: 200px;
             transition: background 0.3s;
         }
 
@@ -178,14 +178,23 @@
                     tile.classList.add("ds-faction");
                 }
 
-                if (faction["Modified:"]){
-                    if (faction["Modified:"].trim().toLowerCase().slice(0, 7) === "lightly"){
+                // if (faction["Modified:"]){
+                //     if (faction["Modified:"].trim().toLowerCase().slice(0, 7) === "lightly"){
+                //         tile.classList.add("modified-lightly");
+                //     }
+                //     if (faction["Modified:"].trim().toLowerCase().slice(0, 10) === "moderately"){
+                //         tile.classList.add("modified-moderately");
+                //     }
+                //     if (faction["Modified:"].trim().toLowerCase().slice(0, 7) === "heavily"){
+                //         tile.classList.add("modified-heavily");
+                //     }
+                // }
+                if (faction["Complexity:"]){
+                    if (faction["Complexity:"].trim().toLowerCase() === "low"){
                         tile.classList.add("modified-lightly");
-                    }
-                    if (faction["Modified:"].trim().toLowerCase().slice(0, 10) === "moderately"){
+                    } else if (faction["Complexity:"].trim().toLowerCase() === "moderate"){
                         tile.classList.add("modified-moderately");
-                    }
-                    if (faction["Modified:"].trim().toLowerCase().slice(0, 7) === "heavily"){
+                    } else if (faction["Complexity:"].trim().toLowerCase() === "high"){
                         tile.classList.add("modified-heavily");
                     }
                 }
@@ -203,6 +212,10 @@
                 // label.textContent = faction["Faction Name:"];
 
                 tile.appendChild(icon);
+
+                let summary = document.createElement("p");
+                summary.innerText = faction["Faction Summary:"] ?? ""
+                tile.appendChild(summary);
                 // tile.appendChild(label);
                 menu.appendChild(tile);
             });
@@ -343,7 +356,7 @@
 
     <h1>TI4 Faction Database</h1>
     <p>This website is personalised for my own set of Twilight Imperium, including all homebrew changes</p>
-    <p>Vanilla factions with a glow have been changed, bigger the glow bigger the change. Feel free to request that any of these changes be reversed, or to propose changes of your own!</p>
+    <!-- <p>Vanilla factions with a glow have been changed, bigger the glow bigger the change. Feel free to request that any of these changes be reversed, or to propose changes of your own!</p> -->
     <p>This is a fork of <a href="https://www.dfwgamingvillage.com/ti.html">https://www.dfwgamingvillage.com/ti.html</a></p>
     <div id="container">
         <label for="factionDropdown"><strong>Select a Faction:</strong></label>
